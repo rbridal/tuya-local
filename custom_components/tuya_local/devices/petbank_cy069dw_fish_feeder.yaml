@@ -151,36 +151,6 @@ entities:
           max: 970
         mapping:
           - scale: 10
-  - entity: number
-    name: Low temperature alert (°C)
-    category: config
-    class: temperature
-    icon: "mdi:thermometer-low"
-    dps:
-      - id: 105
-        type: integer
-        name: value
-        unit: C
-        range:
-          min: 100
-          max: 200
-        mapping:
-          - scale: 10
-  - entity: number
-    name: High temperature alert (°C)
-    category: config
-    class: temperature
-    icon: "mdi:thermometer-high"
-    dps:
-      - id: 106
-        type: integer
-        name: value
-        unit: C
-        range:
-          min: 280
-          max: 360
-        mapping:
-          - scale: 10
   - entity: sensor
     name: Indicator color
     category: diagnostic
@@ -189,47 +159,3 @@ entities:
         type: string
         optional: true
         name: sensor
-  - entity: select
-    name: Feeding
-    translation_key: timer
-    category: config
-    hidden: true
-    dps:
-      - id: 3
-        type: string
-        optional: true
-        name: option
-        mapping:
-          - dps_val: cancel
-            value: cancel
-          - dps_val: "3h"
-            value: "3h"
-          - dps_val: "4h"
-            value: "4h"
-          - dps_val: "6h"
-            value: "6h"
-          - dps_val: diy
-            value: custom
-  - entity: number
-    name: Auto feed
-    category: config
-    hidden: true
-    icon: "mdi:fish"
-    dps:
-      - id: 4
-        type: integer
-        optional: true
-        name: value
-        unit: portions
-        range:
-          min: 0
-          max: 3
-  - entity: text
-    translation_key: meal_plan
-    category: config
-    hidden: true
-    dps:
-      - id: 5
-        type: base64
-        optional: true
-        name: value
