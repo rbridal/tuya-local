@@ -151,11 +151,3 @@ entities:
           max: 970
         mapping:
           - scale: 10
-  - entity: sensor
-    name: Indicator color
-    category: diagnostic
-    dps:
-      - id: 102
-        type: string
-        optional: true
-        name: sensor
